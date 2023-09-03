@@ -12,7 +12,6 @@ export default function TypeWriter(props: TypeWriterProps) {
         words.push(word);
         words.push(props.delay as number);
     }
-    console.log(words);
     return (
         <TypeAnimation
             preRenderFirstString={true}
@@ -24,7 +23,7 @@ export default function TypeWriter(props: TypeWriterProps) {
                 fontWeight: 100,
             }}
             // style={{ fontSize: '2em', display: 'inline-block' }}
-            className={`text-white text-5xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 font-mono italic  font-extralight`}
+            className={`text-white text-7xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 font-mono italic  font-extralight`}
             repeat={Infinity}
       />
     );
