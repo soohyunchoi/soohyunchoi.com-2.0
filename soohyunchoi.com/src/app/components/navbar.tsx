@@ -7,11 +7,13 @@ interface NavLinkProps {
 }
 
 function NavLink(props: NavLinkProps) {
-    const classes = `serif nav-link px-10 ${props.className}`;
+    const classes = `font-serif text-lg nav-link px-10 ${props.className}`;
     return (
-        <a href={props.to} className={classes}>
-            {props.label}
-        </a>
+        <div className={classes}>
+            <a href={props.to}>
+                {props.label}
+            </a>
+        </div>
     );
 }
 
