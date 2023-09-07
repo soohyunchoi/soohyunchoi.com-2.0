@@ -1,3 +1,4 @@
+import { NavBar } from '@/components/navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -15,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='scroll-smooth overscroll-none'>
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='bg-white'>
+        <body className={`bg-white px-32 ${inter.className}`}>
+            <NavBar/>
+            {children}
+        </body>
     </html>
   )
 }

@@ -15,7 +15,6 @@ module.exports = {
     },
     fontFamily: {
         'sans': ['ltc-bodoni-175'],
-        'sans-italic': ['ltc-bodoni-175-italic'],
         'serif': ['futura-pt'],
         'serif-bold': ['futura-pt-bold'],
         'mono': ['JetBrains Mono']
