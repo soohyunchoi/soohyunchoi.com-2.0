@@ -12,17 +12,20 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+          'sans': ['ltc-bodoni-175'],
+          'serif': ['futura-pt'],
+          'serif-bold': ['futura-pt-bold'],
+          'mono': ['JetBrains Mono']
+      },
+      width: {
+          '128': '32rem',
+          '152': '38rem',
+      },
+      borderRadius: {
+        'xl': '1.25rem',
+      }
     },
-    fontFamily: {
-        'sans': ['ltc-bodoni-175'],
-        'serif': ['futura-pt'],
-        'serif-bold': ['futura-pt-bold'],
-        'mono': ['JetBrains Mono']
-    },
-    width: {
-        '128': '32rem',
-        '152': '38rem',
-    }
   },
   plugins: [],
 }

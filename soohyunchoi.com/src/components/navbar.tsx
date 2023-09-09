@@ -1,4 +1,6 @@
+'use client';
 import React, { Component } from 'react';
+import { motion, useScroll } from "framer-motion";
 
 interface NavLinkProps {
     label: string;
@@ -7,9 +9,8 @@ interface NavLinkProps {
 }
 
 function NavLink(props: NavLinkProps) {
-    const classes = `font-serif text-lg nav-link px-10 ${props.className}`;
     return (
-        <div className={classes}>
+        <div className={`font-serif text-lg nav-link px-10 ${props.className}`}>
             <a href={props.to}>
                 {props.label}
             </a>
@@ -29,14 +30,21 @@ function NavMenu(props: NavMenuProps) {
 }
 
 function NavBar() {
+    const { scrollYProgress } = useScroll();
     return (
-        <div className='backdrop-blur text-black flex justify-between fixed top-0 left-0 right-0 pt-7 h-20 px-32'>
-            <img className='object-contain h-full' src='/assets/images/logo.png' alt='logo'/>
-            <NavMenu>
-                <NavLink label='About' to='/about'/>
-                <NavLink label='Resume' to='/resume'/>
-                <NavLink label='Contact' to='/contact'/>
-            </NavMenu>
+        <div>
+            <motion.div
+                className="fixed bg-gradient-to-r from-purple-500 to-pink-500  top-0 left-0 right-0 h-1 origin-left z-20"
+                style={{ scaleX: scrollYProgress }}
+            />
+            <div className='text-black backdrop-blur flex justify-between fixed top-0 left-0 right-0 pt-7 h-20 px-32 z-10'>
+                <img className='object-contain h-full' src='/assets/images/logo.png' alt='logo'/>
+                <NavMenu>
+                    <NavLink label='About' to='/about'/>
+                    <NavLink label='Resume' to='/resume'/>
+                    <NavLink label='Contact' to='/contact'/>
+                </NavMenu>
+            </div>
         </div>
     );
 }

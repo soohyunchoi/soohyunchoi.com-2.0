@@ -1,8 +1,9 @@
 import TypeWriter from '../../components/typewriter'
+import ScrollIndicator from '../../components/scrollindicator'
 
 export default function TitleCard() {
     return (
-        <div className="flex flex-col items-start text-black font-serif justify-center w-256 h-screen -mt-32 mb-32">
+            <div className="flex flex-col items-start text-black font-serif justify-center w-256 h-screen -mt-32 mb-32">
                 <h1 className="text-8xl font-extralight">
                     <span className="font-light"> Hey! I'm </span> <span className="font-sans">Soohyun. </span>
                 </h1>
@@ -13,6 +14,7 @@ export default function TitleCard() {
                 <h1 className="text-8xl font-extralight">
                     <span className="font-light"> software.</span>
                 </h1>
-        </div>
+                <ScrollIndicator/>
+            </div>
     );
 }

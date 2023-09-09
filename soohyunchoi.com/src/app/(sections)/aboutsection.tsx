@@ -114,7 +114,7 @@ function TitleColumn() {
 	);
 }
 
-function IconFooter() {
+export function IconFooter() {
 	return (
 		<div className='flex flex-row text-2xl absolute bottom-10 left-0 space-x-2'>
 			<IconLink icon='ri-linkedin-line'/>
