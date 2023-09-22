@@ -13,19 +13,21 @@ export default function TypeWriter(props: TypeWriterProps) {
         words.push(props.delay as number);
     }
     return (
-        <TypeAnimation
-            preRenderFirstString={true}
-            sequence={words}
-            wrapper="span"
-            speed={12}
-            deletionSpeed={10}
-            style={{
-                fontWeight: 100,
-            }}
-            // style={{ fontSize: '2em', display: 'inline-block' }}
-            className={`text-white text-7xl bg-gradient-to-r from-purple-500 to-pink-500 font-mono italic  font-extralight`}
-            repeat={Infinity}
-      />
+        <span className="z-0 before:block before:absolute before:-bottom-5 before:-inset-2 before:-skew-y-3 relative inline-block before:bg-gradient-to-r from-purple-500 to-pink-500">
+            <TypeAnimation
+                preRenderFirstString={true}
+                sequence={words}
+                wrapper="span"
+                speed={12}
+                deletionSpeed={10}
+                style={{
+                    fontWeight: 100,
+                }}
+                // style={{ fontSize: '2em', display: 'inline-block' }}
+                className={`relative text-white text-7xl font-mono italic font-extralight`}
+                repeat={Infinity}
+        />
+      </span>
     );
   }
   

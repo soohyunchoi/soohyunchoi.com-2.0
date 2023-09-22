@@ -24,7 +24,7 @@ module.exports = {
       },
       borderRadius: {
         'xl': '1.25rem',
-      }
+      },
     },
   },
   plugins: [],
