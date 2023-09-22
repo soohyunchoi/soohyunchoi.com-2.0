@@ -1,6 +1,6 @@
 'use client';
 import ScrollIndicator from '@/components/scrollindicator'
-import WorkSection from './(sections)/aboutsection'
+import WorkSection from './(sections)/worksection'
 import BioSection from './(sections)/biosection'
 import TitleCard from './(sections)/titlecard'
 import Footer from './(sections)/footer'

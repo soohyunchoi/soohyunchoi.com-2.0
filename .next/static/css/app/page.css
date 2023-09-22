@@ -13,12 +13,12 @@
 */
 @font-face {
   font-family: "remixicon";
-  src: url(/_next/static/media/remixicon.227bf528.eot); /* IE9*/
-  src: url(/_next/static/media/remixicon.227bf528.eot#iefix) format('embedded-opentype'), /* IE6-IE8 */
-  url(/_next/static/media/remixicon.5d6b0a13.woff2) format("woff2"),
-  url(/_next/static/media/remixicon.26f18b51.woff) format("woff"),
-  url(/_next/static/media/remixicon.7cc5770e.ttf) format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url(/_next/static/media/remixicon.e0a546f7.svg#remixicon) format('svg'); /* iOS 4.1- */
+  src: url(/nextjs-github-pages/_next/static/media/remixicon.227bf528.eot); /* IE9*/
+  src: url(/nextjs-github-pages/_next/static/media/remixicon.227bf528.eot#iefix) format('embedded-opentype'), /* IE6-IE8 */
+  url(/nextjs-github-pages/_next/static/media/remixicon.5d6b0a13.woff2) format("woff2"),
+  url(/nextjs-github-pages/_next/static/media/remixicon.26f18b51.woff) format("woff"),
+  url(/nextjs-github-pages/_next/static/media/remixicon.7cc5770e.ttf) format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url(/nextjs-github-pages/_next/static/media/remixicon.e0a546f7.svg#remixicon) format('svg'); /* iOS 4.1- */
   font-display: swap;
 }
 

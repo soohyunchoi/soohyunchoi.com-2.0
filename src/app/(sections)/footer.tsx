@@ -11,7 +11,7 @@ export default function Footer() {
                         Thanks for visitin' :)
                     </p>
                     <p>
-                        Don't hesitate to reach out!
+                        Don't hesitate to reach out to chat, ask a question, or just say hey!
                     </p>
                 </div>
                 <div className='space-y-2 flex flex-col items-center'>

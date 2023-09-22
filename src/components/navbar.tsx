@@ -1,5 +1,5 @@
 'use client';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Logo } from './logo';
 import { RESUME_LINK } from '@/app/constants';
@@ -11,12 +11,29 @@ interface NavLinkProps {
 }
 
 function NavLink(props: NavLinkProps) {
+    const highlightVariants = {
+        hover: { scaleX: 1 },
+        initial: { scaleX: 0 }
+    };
+    
+    const transition = { duration: 0.3, type: "spring", stiffness: 200, damping: 20 };
+
     return (
-        <div className={`font-serif text-lg nav-link px-10 ${props.className}`}>
-            <a href={props.to} target={props.newTab ? "_blank" : ''}>
-                {props.label}
-            </a>
-        </div>
+        <motion.div
+            className={`z-40 relative font-serif text-lg mx-10 ${props.className}`}
+        >
+                <motion.a href={props.to} target={props.newTab ? "_blank" : ''}
+                    initial="initial"
+                    whileHover="hover"
+                >
+                    {props.label}
+                    <motion.div
+                        className="absolute left-0 h-[3px] bg-black w-full origin-left"
+                        variants={highlightVariants}
+                        transition={transition}
+                />
+                </motion.a>
+        </motion.div>
     );
 }
 

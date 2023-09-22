@@ -1,46 +1,8 @@
 import 'remixicon/fonts/remixicon.css';
 import { motion, useScroll, Variants, AnimatePresence } from "framer-motion";
-import { IconFooter } from '../(sections)/aboutsection';
+import { IconFooter } from './worksection';
 import { useState, useEffect } from "react";
-
-interface BioCardProps {
-	img: string,
-	label: string,
-	icon?: string,
-	color?: string,
-    secondaryColor?: string,
-}
-
-export const BIO_SECTION_CONTENT: BioCardProps[] = [
-	{
-		img: '/assets/images/2.0/surfing.jpg/',
-		label: 'checking the waves',
-		icon: 'ri-haze-line',
-        color: '#5CD2E6',
-        secondaryColor: '#9fd9e3',
-	},
-	{
-		img: '/assets/images/2.0/djing.jpg/',
-		label: 'enjoying some house music',
-		icon: 'ri-album-fill',
-        color: '#5C5470',
-        secondaryColor: '#B9B4C7',
-	},
-	{
-		img: '/assets/images/2.0/jeep.jpeg/',
-		label: 'offroading to a viewpoint',
-		icon: 'ri-bus-2-line',
-        color: '#FFB000',
-        secondaryColor: '#ffd16b',
-	},
-    {
-        img: '/assets/images/2.0/49.jpg/',
-        label: 'spending time with friends',
-        icon: 'ri-anchor-fill',
-        color: '#9D44C0',
-        secondaryColor: '#FFA1F5',
-    },
-]
+import { BIO_SECTION_CONTENT } from '../constants';
 
 export default function AboutSection() {
     const [selected, setSelected] = useState(0);
@@ -204,9 +166,9 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
                     {/* <img className='absolute inset-0 w-full h-full object-cover' src={`${BIO_SECTION_CONTENT[props.selected].img}`} alt='sush'/> */}
                     <AnimatePresence initial={false} custom={direction}>
                         <motion.img
-                            className='absolute inset-0 w-full h-full object-cover'
+                            className='absolute inset-0 w-full h-full object-cover select-none'
                             key={props.counter}
-                            src={BIO_SECTION_CONTENT[props.selected].img}
+                            src={`/nextjs-github-pages/${BIO_SECTION_CONTENT[props.selected].img}`}
                             variants={imageVariants}
                             initial="enter"
                             animate="center"
