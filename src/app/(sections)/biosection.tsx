@@ -168,7 +168,7 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
                         <motion.img
                             className='absolute inset-0 w-full h-full object-cover select-none'
                             key={props.counter}
-                            src={`${BIO_SECTION_CONTENT[props.selected].img}`}
+                            src={BIO_SECTION_CONTENT[props.selected].img}
                             variants={imageVariants}
                             initial="enter"
                             animate="center"
