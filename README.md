@@ -33,3 +33,6 @@ $ cd soohyunchoi.github.io
 $ npm install
 $ npm run dev
 ```
+
+## 🚀 Deployment
+See [nextjs-github-pages](https://github.com/gregrickaby/nextjs-github-pages). Uses Github Actions to build and deploy to Github Pages.
