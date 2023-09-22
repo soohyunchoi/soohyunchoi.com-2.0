@@ -128,6 +128,14 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
 
     const [direction, setDirection] = useState(0);
 
+    // preload images
+    useEffect(() => {
+        BIO_SECTION_CONTENT.forEach(content => {
+            const img = new Image();
+            img.src = content.img;
+        });
+    }, []);
+
     function handleLeftClick() {
         setDirection(-1);
         props.handleLeftClick();
@@ -160,20 +168,6 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
 
 	return (
 		<div className='flex flex-col justify-center w-full -mt-12'>
-            {/* preload images using nextjs Head */}
-            {
-                BIO_SECTION_CONTENT.map((content) => (
-                    (
-                        <Head>
-                            <link
-                                rel="preload"
-                                href={content.img}
-                                as="image"
-                            />
-                        </Head>
-                    )
-                ))
-            }
             <div className='relative ml-32 w-[24rem]'>
                 <CarouselButton direction={-1} selected={props.selected} handler={handleLeftClick}/>
                 {/* <BioPicture src='/assets/images/2.0/surfing.jpg/'/> */}
