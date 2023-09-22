@@ -3,6 +3,7 @@ import { motion, useScroll, Variants, AnimatePresence } from "framer-motion";
 import { IconFooter } from './worksection';
 import { useState, useEffect } from "react";
 import { BIO_SECTION_CONTENT } from '../constants';
+import Head from 'next/head';
 
 export default function AboutSection() {
     const [selected, setSelected] = useState(0);
@@ -159,6 +160,20 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
 
 	return (
 		<div className='flex flex-col justify-center w-full -mt-12'>
+            {/* preload images using nextjs Head */}
+            {
+                BIO_SECTION_CONTENT.map((content) => (
+                    (
+                        <Head>
+                            <link
+                                rel="preload"
+                                href={content.img}
+                                as="image"
+                            />
+                        </Head>
+                    )
+                ))
+            }
             <div className='relative ml-32 w-[24rem]'>
                 <CarouselButton direction={-1} selected={props.selected} handler={handleLeftClick}/>
                 {/* <BioPicture src='/assets/images/2.0/surfing.jpg/'/> */}
