@@ -58,7 +58,7 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
         secondaryColor: '#C08261',
     },
 ]
-export const RESUME_LINK: string = 'https://drive.google.com/file/d/10xpyfXO6LJo8GRZ4lJOOOFCHhK1RK5mP/view?usp=sharing';
+export const RESUME_LINK: string = 'https://drive.google.com/file/d/1YTWzDu--k0YjHd-BOwxaT5ajiNTm_2aK/view?usp=sharing';
 export const LINKS: any= {
     linkedIn: "https://www.linkedin.com/in/soohyunchoi/",
     gitHub: 'https://github.com/soohyunchoi',
