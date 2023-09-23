@@ -33,7 +33,7 @@ I graduated from UCSB in June of 2023, and decided that I need a better online b
 
 ## ⌨️ Launch & Develop 
 ```
-$ git clone git@github.com:soohyunchoi/soohyunchoi.github.io.git
+$ git clone git@github.com:soohyunchoi/soohyunchoi.com-2.0.git
 $ cd soohyunchoi.github.io
 $ npm install
 $ npm run dev
