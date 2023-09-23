@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://www.soohyunchoi.com/assets/images/logo.png" width="100" />
+  <img alt="Logo" src="https://www.soohyunchoi.com/assets/images/logo.webp" width="100" />
 </div>
 <h1 align="center">
   soohyunchoi.com 🌊
