@@ -79,7 +79,7 @@ export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
             identification time by 90%. Researched state-of-the-art LLM \
             grounding techniques.",
         technologies: ["PHP", "React", "AWS", "Typescript"],
-        logo: "https://media.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1612205615891?e=1701907200&v=beta&t=Iw9xHQ0dqrYiF_N9ck2_-cktalalJzNhJ48_SWyuYZc"
+        logo: "https://media.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1630640869849/amazon_logo?e=2147483647&v=beta&t=2vRB20XZOYNtXSr5GHAUUQXXII4lvgcotA2QTMcRHOI"
     },
     {
         startDate: new Date(2021, 6),
@@ -92,7 +92,7 @@ export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
             interactions. Constructed primary pages and reusable UI components, \
             ensuring extensibility.",
         technologies: ["SwiftUI", "Swift", "Django"],
-        logo: "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/309987044_469918101823936_835612425203704977_n.png?_nc_cat=109&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=G_Nd9SCJhM4AX8uvdN8&_nc_ht=scontent-lax3-1.xx&oh=00_AfCGcmfiEGa0ea4Ar14BiUdl9gyLiFChMLAMzbsAT3Q31A&oe=6512795F"
+        logo: "https://bookface-images.s3.amazonaws.com/small_logos/8906169a88bda866fc7b928a110627276ee2e93f.png"
     },
     {
         startDate: new Date(2020, 11),
