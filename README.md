@@ -25,6 +25,7 @@ I graduated from UCSB in June of 2023, and decided that I need a better online b
 - Custom animations built with Framer Motion
 - Components designed from the ground-up with TailwindCSS
 - Speed with Next.js SSG (96 performance score on [Google Pagespeed](https://pagespeed.web.dev/analysis/https-soohyunchoi-com/6c8e77c7vc?form_factor=desktop)
+- Utilizes a nifty open-source Next.js -> Github Pages automation pipeline
 
 ## 🔗 Dependencies
 - tailwindcss
