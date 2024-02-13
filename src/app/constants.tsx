@@ -70,14 +70,11 @@ export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
         startDate: new Date(2022, 6),
         company: "Amazon",
         position: "Junior Software Developer",
-        description: "Research and develop state-of-the-art LLM retrieval-augmented grounding techniques. \
+        description: "Research and develop state-of-the-art LLM RAG techniques. \
 	    Designed and implemented AI NLU tools, streamlining \
-            workflows and saving over $100,000 monthly. Developed microservices \
+            workflows and saving $100,000+ monthly. Developed microservices \
             for Alexa, handling 4,500+ queries/second using advanced NLU and \
-            knowledge graphs. Engineered robust API endpoints on AWS, ensuring \
-            optimal user latency. Wrote frontend components in React and \
-            Typescript, enhancing debugging visibility and reducing issue \
-            identification time by 90%.",
+            knowledge graphs with optimized latency at scale."
         technologies: ["Java", "LLM-RAG", "OpenCypher", "AWS", "PHP", "React", "Typescript"],
         logo: "https://media.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1630640869849/amazon_logo?e=2147483647&v=beta&t=2vRB20XZOYNtXSr5GHAUUQXXII4lvgcotA2QTMcRHOI"
     },
