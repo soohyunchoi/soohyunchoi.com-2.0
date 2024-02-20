@@ -74,7 +74,7 @@ export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
 	    Designed and implemented AI NLU tools, streamlining \
             workflows and saving $100,000+ monthly. Developed microservices \
             for Alexa, handling 4,500+ queries/second using advanced NLU and \
-            knowledge graphs with optimized latency at scale."
+            knowledge graphs with optimized latency at scale.",
         technologies: ["Java", "LLM-RAG", "OpenCypher", "AWS", "PHP", "React", "Typescript"],
         logo: "https://media.licdn.com/dms/image/C560BAQHTvZwCx4p2Qg/company-logo_200_200/0/1630640869849/amazon_logo?e=2147483647&v=beta&t=2vRB20XZOYNtXSr5GHAUUQXXII4lvgcotA2QTMcRHOI"
     },
