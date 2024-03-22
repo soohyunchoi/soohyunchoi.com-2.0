@@ -68,8 +68,8 @@ export const LINKS: any= {
 export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
     {
         startDate: new Date(2022, 6),
-        company: "Amazon",
-        position: "Junior Software Developer",
+        company: "Amazon AGI",
+        position: "Software Engineer",
         description: "Research and develop state-of-the-art LLM RAG techniques. \
 	    Designed and implemented AI NLU tools, streamlining \
             workflows and saving $100,000+ monthly. Developed microservices \

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-black font-serif justify-center mt-32 space-y-5">
                 <div className='space-y-2 flex flex-col items-center'>
                     <p>
-                        Thanks for visitin' :)
+                        Thanks for visiting :)
                     </p>
                     <p>
                         Don't hesitate to reach out to chat, ask a question, or just say hey!
@@ -19,7 +19,7 @@ export default function Footer() {
                         Made with <i className="ri-mouse-line"></i> and <i className="ri-keyboard-box-line"></i> {'<'}3
                     </p>
                     <p className='font-light'>
-                        © Soohyun Choi 2023
+                        © Soohyun Choi 2024
                     </p>
                 </div>
 			</div>

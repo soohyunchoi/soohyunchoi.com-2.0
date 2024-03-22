@@ -110,11 +110,14 @@ function TitleColumn() {
                     </h1>
 
                     <h1 className="font-serif font-medium text-7xl">
-                        Junior Software
+                        Software
                     </h1>
                     <h1 className="font-serif font-medium text-7xl">
-                        Developer
-                        <span className="font-extralight"> at </span>
+                        Development
+                    </h1>
+                    <h1 className="font-serif font-medium text-7xl">
+                        Engineer
+                        <span className="font-sans italic font-medium text-6xl"> at </span>
                     </h1>
                     <h1 className="font-serif font-medium text-7xl">
                         Amazon
