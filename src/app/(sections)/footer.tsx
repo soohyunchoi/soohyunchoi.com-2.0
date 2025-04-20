@@ -19,7 +19,7 @@ export default function Footer() {
                         Made with <i className="ri-mouse-line"></i> and <i className="ri-keyboard-box-line"></i> {'<'}3
                     </p>
                     <p className='font-light'>
-                        © Soohyun Choi 2024
+                        © Soohyun Choi 2025
                     </p>
                 </div>
 			</div>

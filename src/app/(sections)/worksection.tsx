@@ -42,7 +42,10 @@ export interface JobCardProps {
 }
 function JobCard(props: JobCardProps) {
     function monthsBetweenDates(start: Date, end: Date) {
-        return (end.getFullYear() - start.getFullYear()) * 12 + end.getMonth() - start.getMonth();
+        const totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + end.getMonth() - start.getMonth();
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+        return `${years > 0 ? years + ' yr ' : ''}${months} mo`;
     }
     function formatDateToMonthYear(date: Date): string {
         const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -56,7 +59,7 @@ function JobCard(props: JobCardProps) {
 			<div className='flex flex-col items-end place-content-between basis-1/4'>
                 <div className='text-right'>
                     <h3>{formatDateToMonthYear(props.startDate)} - {props.endDate ? formatDateToMonthYear(props.endDate) : 'Present'}</h3>
-                    <h3>{monthsBetweenDates(props.startDate, props.endDate ?? new Date())} mo</h3>
+                    <h3>{monthsBetweenDates(props.startDate, props.endDate ?? new Date())}</h3>
                 </div>
                 <div>
 				    <img className='object-scale-down h-16 mb-4' src={props.logo}></img>
@@ -70,8 +73,8 @@ function JobCard(props: JobCardProps) {
 			{/* right column (title, description, technologies) */}
 			<div className='basis-3/4'>
 				<h1 className='text-2xl font-medium'>
-                    {props.position} 
-                    <span className='text-xl font-light'> // </span> 
+                    {props.position}
+                    <span className='text-xl font-light'> // </span>
                     {props.company}
                 </h1>
 				<h2 className='text-xl font-light'></h2>
@@ -176,10 +179,10 @@ function IconLink(props: IconLinkProps) {
             }
         }
     };
-      
+
 	return (
         <div>
-            <motion.div 
+            <motion.div
                 whileHover="visible"
                 whileTap="visible"
                 className='h-10 w-10 rounded-full flex items-center justify-center cursor-pointer'
@@ -191,7 +194,7 @@ function IconLink(props: IconLinkProps) {
                 }}
             >
                 <motion.svg
-                
+
                     className="absolute"
                     width="60"
                     height="60"
