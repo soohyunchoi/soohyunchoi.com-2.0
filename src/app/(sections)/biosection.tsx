@@ -53,7 +53,6 @@ function TitleColumn(props: TitleColumnProps) {
         hidden: { opacity: 0, y: 10 },
         visible: { opacity: 1, y: 0, 
             transition: { 
-                // delay: 0.2, 
                 duration: 0.5,
                 type: "spring",
                 damping: 20,
@@ -63,6 +62,23 @@ function TitleColumn(props: TitleColumnProps) {
         exit: {opacity: 0, y: 10, transition: { duration: 0.5 } }
     };
 
+    // Calculate the maximum height needed for the longest label
+    const maxLabelHeight = Math.max(...BIO_SECTION_CONTENT.map(content => {
+        // Create a temporary div to measure the height
+        const div = document.createElement('div');
+        div.style.fontSize = '4.5rem'; // text-7xl equivalent
+        div.style.fontFamily = 'serif'; // font-serif equivalent
+        div.style.fontWeight = '500'; // font-medium equivalent
+        div.style.position = 'absolute';
+        div.style.visibility = 'hidden';
+        div.style.whiteSpace = 'pre-wrap';
+        div.textContent = content.label;
+        document.body.appendChild(div);
+        const height = div.offsetHeight;
+        document.body.removeChild(div);
+        return height;
+    }));
+
 	return (
 		<div className='w-full pr-32 relative flex flex-col justify-center'>
 			<div className='flex flex-col space-y-5'>
@@ -71,24 +87,25 @@ function TitleColumn(props: TitleColumnProps) {
 					<span className='italic'>
 						Right now, I'm <br/>
 					</span>
-                    <AnimatePresence key={props.counter}>
-                        <motion.div
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            variants={headerVariants}
-                            key={props.counter}
-                            className='font-serif font-medium text-7xl '
-                            >
-                            {
-                                BIO_SECTION_CONTENT[props.selected].label
-                            }
-                        </motion.div>
-                    </AnimatePresence>
-                    
+                    <div style={{ height: `${maxLabelHeight}px` }} className='relative'>
+                        <AnimatePresence key={props.counter}>
+                            <motion.div
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                                variants={headerVariants}
+                                key={props.counter}
+                                className='font-serif font-medium text-7xl absolute w-full'
+                                >
+                                {
+                                    BIO_SECTION_CONTENT[props.selected].label
+                                }
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
 				</h1>
 
-				<div className="font-serif font-light text-xl space-y-5">
+				<div className="font-serif font-light text-xl space-y-5 pt-8">
 
 					<p>
 					People call me Sush. I graduated from UC Santa Barbara (go Gauchos!) with a bachelor's in Computer Science.
