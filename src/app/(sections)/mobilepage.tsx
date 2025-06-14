@@ -26,7 +26,7 @@ export default function MobilePage() {
                             duration: 1.5,
                             delay: 2
                         }}
-                        className="text-lg italic mb-6 text-right pr-10"
+                        className="font-sans text-lg italic mb-6 text-right pr-10"
                     >
                         — Soohyun
                     </motion.h1>
