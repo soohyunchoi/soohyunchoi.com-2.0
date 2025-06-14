@@ -1,7 +1,7 @@
-import { NavBar } from '@/components/navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import LayoutWrapper from '@/components/LayoutWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='bg-white scroll-smooth'>
-        <body className={`bg-white px-32 ${inter.className}`}>
-            <NavBar/>
-            {children}
+        <body className={`bg-white ${inter.className}`}>
+            <LayoutWrapper>
+                {children}
+            </LayoutWrapper>
         </body>
     </html>
   )
