@@ -38,7 +38,7 @@ export default function MobilePage() {
                         }}
                         transition={{
                             duration: 1.5,
-                            repeat: Infinity,
+                            repeat: 1,
                             repeatDelay: 1,
                             ease: "easeInOut"
                         }}
