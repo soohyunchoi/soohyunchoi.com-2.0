@@ -116,7 +116,7 @@ function TitleColumn(props: TitleColumnProps) {
 					</p>
 
 					<p>
-					Outside of work, I love listening, producing, and spinning house music, snowboarding, surfing, off-roading, golfing, watching movies, and playing Valorant!
+					Outside of work, I love listening, spinning, and sharing house music, snowboarding, surfing, off-roading, golfing, photography, and traveling!
 					</p>
 
 					<p>
