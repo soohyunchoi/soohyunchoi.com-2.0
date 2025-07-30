@@ -100,6 +100,9 @@ function TitleColumn(props: TitleColumnProps) {
                                 {
                                     BIO_SECTION_CONTENT[props.selected].label
                                 }
+                                {BIO_SECTION_CONTENT[props.selected].icon && (
+                                    <span className={BIO_SECTION_CONTENT[props.selected].icon + ' ml-4 align-middle text-5xl'} />
+                                )}
                             </motion.div>
                         </AnimatePresence>
                     </div>
@@ -112,15 +115,15 @@ function TitleColumn(props: TitleColumnProps) {
 					</p>
 
 					<p>
-					I've always been a builder. I built my first PC when I was in middle school and my first calculator app when I was in elementary school. 
+					I've always been a builder. I built my first PC when I was in middle school and my first calculator app when I was in elementary school. Once I'm going, I just can't stop :)
 					</p>
 
 					<p>
-					Outside of work, I love listening, spinning, and sharing house music, snowboarding, surfing, off-roading, golfing, photography, and traveling!
+					Outside of work, I love listening, spinning, and sharing house music, snowboarding, surfing, off-roading, golf, nature & street photography, and traveling!
 					</p>
 
 					<p>
-					<span className='italic font-sans bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>hint:</span> click the arrows to try my over designed carousel :)
+					<span className='italic font-sans bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>hint:</span> click the arrows to try my over designed carousel !
 					</p>
 					
 				</div>
