@@ -1,13 +1,33 @@
 'use client';
 import { motion, spring } from "framer-motion";
+import { RESUME_LINK } from '@/app/constants';
 
 export default function MobilePage() {
     return (
         <div className="w-full min-h-screen bg-white">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 30,
+                    duration: 1.5,
+                    delay: 0
+                }}
+                className="flex justify-center gap-10 pt-7 px-6"
+            >
+                <a href={RESUME_LINK} target="_blank" className="font-serif text-lg italic font-light">
+                    Resume
+                </a>
+                <a href="mailto:hello@soohyunchoi.com" className="font-serif text-lg italic font-light">
+                    Email
+                </a>
+            </motion.div>
             <main className="w-full px-4 py-8">
                 <motion.div
-                    initial={{ opacity: 0, y: 150 }}
-                    animate={{ opacity: 1, y: 50 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{
                         type: "spring",
                         stiffness: 100,
@@ -17,7 +37,7 @@ export default function MobilePage() {
                     }}
                     className="font-sans text-6xl mb-6 text-center"
                 >
-                    <motion.h1 
+                    <motion.h1
                         initial={{ opacity: 0, y: 240 }}
                         animate={{ opacity: 1, y: 225 }}
                         transition={{
@@ -33,8 +53,8 @@ export default function MobilePage() {
                     </motion.h1>
                     <span className="font-sans text-5xl italic pr-4">Hey!</span>
                     <motion.span
-                        animate={{ 
-                            rotate: [0, 20, -10, 20, 0] 
+                        animate={{
+                            rotate: [0, 20, -10, 20, 0]
                         }}
                         transition={{
                             duration: 1.5,
@@ -42,7 +62,7 @@ export default function MobilePage() {
                             repeatDelay: 1,
                             ease: "easeInOut"
                         }}
-                        style={{ 
+                        style={{
                             display: "inline-block",
                             transformOrigin: "70% 70%"
                         }}
