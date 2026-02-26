@@ -87,6 +87,24 @@ export default function MobilePage() {
                     </motion.h1>
                 </motion.div>
             </main>
+            <motion.div
+                initial={{ opacity: 0, y: 240 }}
+                animate={{ opacity: 1, y: 225 }}
+                transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 30,
+                    duration: 1.5,
+                    delay: 3
+                }}
+                className="-mt-40 px-4 pb-8 w-full flex justify-center"
+            >
+                <img
+                    src="/assets/images/2.0/IMG_0539.webp"
+                    alt="Photo"
+                    className="rounded-lg w-full max-w-md"
+                />
+            </motion.div>
         </div>
     );
 } 
