@@ -10,46 +10,25 @@ interface BioCardProps {
 export const BIO_SECTION_CONTENT: BioCardProps[] = [
 	{
 		img: '/assets/images/2.0/dive.webp',
-		label: 'playing in the ocean',
+		label: 'bringing my camera everywhere',
 		icon: 'ri-pulse-line',
         color: '#43545c',
         secondaryColor: '#7798a6',
 	},
 	{
         img: '/assets/images/2.0/djing.webp',
-		label: 'enjoying some house music',
+		label: 'enjoying some tunes',
 		icon: 'ri-album-fill',
         color: '#5C5470',
         secondaryColor: '#B9B4C7',
 	},
     {
-        img: '/assets/images/2.0/surfing.webp',
-        label: 'checking the waves',
-        icon: 'ri-anchor-fill',
-        color: '#5CD2E6',
-        secondaryColor: '#9fd9e3',
-    },
-    {
-        img: '/assets/images/2.0/golf.webp',
-        label: 'losing golf balls',
-        icon: 'ri-crosshair-2-line',
-        color: '#285430',
-        secondaryColor: '#5F8D4E',
-    },
-    {
         img: '/assets/images/2.0/rinjani.webp',
-        label: 'getting uncomfortable',
+        label: 'trying hard things',
         icon: 'ri-rocket-line',
         color: '#ffd70f',
         secondaryColor: '#eddc87',
     },
-	{
-		img: '/assets/images/2.0/jeep.webp',
-		label: 'finding the spot',
-		icon: 'ri-bus-2-line',
-        color: '#FFB000',
-        secondaryColor: '#ffd16b',
-	},
     {
         img: '/assets/images/2.0/49.webp',
         label: 'spending time with friends',
@@ -66,19 +45,12 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
     },
     {
         img: '/assets/images/2.0/bali_fisher.webp',
-        label: 'experiencing people',
+        label: 'making friends',
         icon: 'ri-heart-line',
         color: '#ff7e14',
         secondaryColor: '#c9966d',
-    },
-    {
-        img: '/assets/images/2.0/snow.webp',
-        label: 'snowboarding the pow',
-        icon: 'ri-snowy-line',
-        color: '#9A3B3B',
-        secondaryColor: '#C08261',
-    },
-]
+    }
+];
 export const RESUME_LINK: string = 'https://drive.google.com/file/d/1dwCIBo9f2swiSd8T905KPb60orNUqive/view?usp=sharing';
 export const LINKS: any= {
     linkedIn: "https://www.linkedin.com/in/soohyunchoi/",
@@ -91,12 +63,15 @@ export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
         startDate: new Date(2022, 6),
         company: "Amazon AGI",
         position: "Software Engineer",
-        description: "Research and develop state-of-the-art LLM RAG techniques. \
-	    Designed and implemented AI NLU tools, streamlining \
-            workflows and saving $100,000+ monthly. Developed microservices \
-            for Alexa, handling 4,500+ queries/second using advanced NLU and \
-            knowledge graphs with optimized latency at scale.",
-        technologies: ["Java", "LLM-RAG", "AWS", "PySpark", "Sys Design"],
+        description: "Built Knowledge Panels 0→1 — a real-time retrieval system \
+            ingesting 125M+ docs/day at 5-min freshness, serving Alexa+, Hyperion, \
+            and Nova foundation models via PySpark, OpenSearch, and DynamoDB. \
+            Rearchitected ingestion to event-driven, achieving 240x inference \
+            reduction and $126K/month in savings. Regionalized from 1→5+ AWS regions. \
+            Shipped a sandbox testing framework (18x faster iteration, ~$500K/month saved) \
+            and an automated AI eval framework for real-time ground truth accuracy, adopted \
+            org-wide by 50+ engineers.",
+        technologies: ["RAG", "Python", "AWS", "EMR", "Kafka", "OpenSearch", "DynamoDB"],
         logo: "https://media.licdn.com/dms/image/v2/D4E0BAQFhA9Zcn70JcQ/company-logo_200_200/B4EZpZ4PjKIoAI-/0/1762444507684/amazonscience_logo?e=1776902400&v=beta&t=PlU9ytie-QlIZQXxqBj6ytE3QbqDJjRg0y2TGaygpzU"
     },
     {

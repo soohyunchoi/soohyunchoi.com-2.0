@@ -115,11 +115,12 @@ function TitleColumn(props: TitleColumnProps) {
 					</p>
 
 					<p>
-					I've always been a builder. I built my first PC when I was in middle school and my first calculator app when I was in elementary school. Once I'm going, I just can't stop :)
+					I've always been a builder. I built my first PC when I was in middle school and my first calculator app when I was in elementary school. I think being a builder feeds into my love for learning -- 
+                    I have way too many hobbies and interests, but I think that's what gives life its flavor :)
 					</p>
 
 					<p>
-					Outside of work, I love listening, spinning, and sharing house music, snowboarding, surfing, off-roading, golf, nature & street photography, and traveling!
+					Outside of work, I love house music, snowboarding, surfing, anything outdoorsy, photography, and traveling!
 					</p>
 
 					<p>
