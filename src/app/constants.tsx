@@ -16,7 +16,7 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
         secondaryColor: '#7798a6',
 	},
 	{
-        img: '/assets/images/2.0/djing.webp',
+        img: '/assets/images/2.0/dj_v2.webp',
 		label: 'enjoying some tunes',
 		icon: 'ri-album-fill',
         color: '#5C5470',
@@ -37,8 +37,8 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
         secondaryColor: '#FFA1F5',
     },
     {
-        img: '/assets/images/2.0/costarica.webp',
-        label: 'exploring things & places',
+        img: '/assets/images/2.0/anna.webp',
+        label: 'putting on events',
         icon: 'ri-anchor-fill',
         color: '#5CD2E6',
         secondaryColor: '#9fd9e3',
