@@ -38,7 +38,7 @@ export default function TitleCard() {
 			</motion.h1>
 			<motion.h1 className="text-8xl font-extralight" variants={popIn}>
 				<span className="font-light"> I build </span>
-				<TypeWriter words={['scalable', 'robust', 's.o.t.a.', 'ethical', 'fast']} delay={1500} />
+				<TypeWriter words={['scalable', 'robust', 's.o.t.a.', 'impactful', 'fast']} delay={1500} />
 			</motion.h1>
 			<motion.h1 className="text-8xl font-extralight" variants={popIn}>
 				<span className="font-light"> software.</span>

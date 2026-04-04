@@ -30,18 +30,18 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
         secondaryColor: '#eddc87',
     },
     {
-        img: '/assets/images/2.0/49.webp',
-        label: 'spending time with friends',
-        icon: 'ri-mental-health-line',
-        color: '#9D44C0',
-        secondaryColor: '#FFA1F5',
-    },
-    {
         img: '/assets/images/2.0/anna.webp',
         label: 'putting on events',
         icon: 'ri-anchor-fill',
         color: '#5CD2E6',
         secondaryColor: '#9fd9e3',
+    },
+    {
+        img: '/assets/images/2.0/49.webp',
+        label: 'spending time with friends',
+        icon: 'ri-mental-health-line',
+        color: '#9D44C0',
+        secondaryColor: '#FFA1F5',
     },
     {
         img: '/assets/images/2.0/bali_fisher.webp',
