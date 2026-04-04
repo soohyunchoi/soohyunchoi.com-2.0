@@ -57,6 +57,7 @@ export const LINKS: any= {
     gitHub: 'https://github.com/soohyunchoi',
     twitter: 'https://twitter.com/sushchoi',
     email: 'mailto:hello@soohyunchoi.com',
+    instagram: 'https://www.instagram.com/sushdawgdumps',
 };
 export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
     {

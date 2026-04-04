@@ -14,9 +14,9 @@ export default function ScrollIndicator(props: ScrollIndicatorProps) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{type: "spring", duration: 0.5}}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
-                <div className='h-12 flex flex-col justify-center text-black space-y-4 fixed left-1/2 mb-12 bottom-0'>
+                <div className='h-12 flex flex-col justify-center text-black space-y-4 fixed left-1/2 mb-32 bottom-0'>
                     <span className='font-sans italic text-lg text-center'>scroll</span>
                     <div className='animate-bounce h-20'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="52" height="22" viewBox="0 0 52 22" fill="none">

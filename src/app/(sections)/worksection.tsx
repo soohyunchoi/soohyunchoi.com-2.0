@@ -2,6 +2,20 @@ import 'remixicon/fonts/remixicon.css';
 import { ABOUT_SECTION_CONTENT, LINKS } from '@/app/constants';
 import { motion, Variants } from "framer-motion";
 
+const popIn: Variants = {
+	hidden: { opacity: 0, y: 24, scale: 0.95 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		scale: 1,
+		transition: {
+			opacity: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+			y: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+			scale: { duration: 0.7, ease: [0.34, 1.56, 0.64, 1] },
+		}
+	}
+};
+
 export default function WorkSection() {
 	return (
 		<section id="work" className="text-black grid grid-cols-2 pt-48">
@@ -54,7 +68,13 @@ function JobCard(props: JobCardProps) {
         return `${month} ${year}`;
     }
 	return (
-		<div className='w-full flex flex-row font-serif space-x-8 py-5'>
+		<motion.div
+			className='w-full flex flex-row font-serif space-x-8 py-5'
+			variants={popIn}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: false, margin: "0px 0px -60px 0px" }}
+		>
 			{/*left column (date, duration, logo) */}
 			<div className='flex flex-col items-end place-content-between basis-1/4'>
                 <div className='text-right'>
@@ -87,7 +107,7 @@ function JobCard(props: JobCardProps) {
 						}
 					</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 
@@ -106,7 +126,13 @@ function TechnologyBadge(props: TechnologyBadgeProps) {
 function TitleColumn() {
 	return (
         <div>
-            <div className='w-full pr-32 sticky top-1/4'>
+            <motion.div
+			className='w-full pr-32 sticky top-1/4'
+			variants={popIn}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+		>
                 <div className='flex flex-col space-y-1.5'>
                     <h1 className="font-sans italic font-medium text-6xl">
                         Right now, I'm a
@@ -127,7 +153,7 @@ function TitleColumn() {
                     </h1>
                 </div>
                 <IconFooter/>
-            </div>
+            </motion.div>
         </div>
 	);
 }
@@ -141,6 +167,7 @@ export function IconFooter(props: IconFooterProps) {
 			<IconLink icon='ri-github-line' to={LINKS.gitHub}/>
 			<IconLink icon='ri-twitter-line' to={LINKS.twitter}/>
 			<IconLink icon='ri-mail-line' to={LINKS.email}/>
+			<IconLink icon='ri-instagram-line' to={LINKS.instagram}/>
 		</div>
 	);
 }

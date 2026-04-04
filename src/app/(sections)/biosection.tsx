@@ -5,6 +5,20 @@ import { useState, useEffect } from "react";
 import { BIO_SECTION_CONTENT } from '../constants';
 import Head from 'next/head';
 
+const popIn: Variants = {
+    hidden: { opacity: 0, y: 24, scale: 0.95 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: {
+            opacity: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+            y: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+            scale: { duration: 0.7, ease: [0.34, 1.56, 0.64, 1] },
+        }
+    }
+};
+
 export default function AboutSection() {
     const [selected, setSelected] = useState(0);
     const [counter, setCounter] = useState(0); // key generator for AnimatePresence
@@ -80,7 +94,13 @@ function TitleColumn(props: TitleColumnProps) {
     }));
 
 	return (
-		<div className='w-full pr-32 relative flex flex-col justify-center'>
+		<motion.div
+			className='w-full pr-32 relative flex flex-col justify-center'
+			variants={popIn}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+		>
 			<div className='flex flex-col space-y-5'>
 
 				<h1 className="font-sans font-medium text-6xl">
@@ -115,17 +135,26 @@ function TitleColumn(props: TitleColumnProps) {
 					</p>
 
 					<p>
-					I've always been a builder. I built my first PC when I was in middle school and my first calculator app when I was in elementary school. I think being a builder feeds into my love for learning --
-                    I have way too many hobbies and interests, but I think that's what gives life its flavor :)
+                    My specialty is in building large scale distributed systems and AI infrastructure. My most recent project involved
+                    materializing & ingesting 150M+ documents every day, and retrieving the 10 most relevant documents fast enough
+                    to continue a conversation with an LLM in real time. This allowed Amazon's LLMs to answer accurately about 
+                    the latest information, such as sports, news, and stock prices, something that wouldn't be possible without our system.
+					</p>
+
+
+					<p>
+					Like any other builder, I love learning new things. That does mean I have way too many hobbies and interests, but I think that's what gives life its flavor :)
+                    I love to surf Ocean Beach SF (my favorite book of all time is Barbarian Days, which has a section on OBSF), snowboarding (recently -- backcountry), 
+                    photography (check out my photo account!), and going to concerts with my friends.
 					</p>
 
                     <p>
-                    I genuinely believe that life is just people and experiences. I love meeting new people and optimize to work with people who share the same values: lifelong learning, empathy, and drive to get the most out of life.
-                    Give me that and an interesting problem to chew on, and I'm a happy camper.
+                    I genuinely believe that life is just people and experiences. I love meeting new people and optimize to work with people who share the same values: lifelong learning, connection, and the inner drive to get the most out of life.
+                    That, and an interesting project to build and chew on every day, is just absolute peak.
                     </p>
 
 					<p>
-					<span className='italic font-sans bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>hint:</span> click the arrows to try my over designed carousel !
+					<span className='italic font-sans bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>hint:</span> click the arrows to try my over designed carousel :)
 					</p>
 					
 				</div>
@@ -134,7 +163,7 @@ function TitleColumn(props: TitleColumnProps) {
 
 			</div>
 
-		</div>
+		</motion.div>
 	);
 }
 
@@ -194,7 +223,13 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
     };
 
 	return (
-		<div className='flex flex-col justify-center w-full -mt-12'>
+		<motion.div
+			className='flex flex-col justify-center w-full -mt-12'
+			variants={popIn}
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: false, margin: "0px 0px -80px 0px" }}
+		>
             <div className='relative ml-32 w-[24rem]'>
                 <CarouselButton direction={-1} selected={props.selected} handler={handleLeftClick}/>
                 {/* <BioPicture src='/assets/images/2.0/surfing.jpg/'/> */}
@@ -222,7 +257,7 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
                 <CarouselButton direction={1} selected={props.selected} handler={handleRightClick}/>
                 <CarouselIndicator num={BIO_SECTION_CONTENT.length} selected={props.selected} icon={BIO_SECTION_CONTENT[props.selected].icon ?? ''}/>
             </div>
-        </div>
+        </motion.div>
 	);
 }
 
