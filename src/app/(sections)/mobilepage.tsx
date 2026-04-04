@@ -4,7 +4,7 @@ import { RESUME_LINK } from '@/app/constants';
 
 export default function MobilePage() {
     return (
-        <div className="w-full min-h-screen bg-white">
+        <div className="w-full min-h-screen" style={{backgroundColor: '#eeebe3'}}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
