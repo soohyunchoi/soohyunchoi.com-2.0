@@ -11,7 +11,7 @@ export default function Home() {
     const [scrollIndicatorVisible, setScrollIndicatorVisible] = useState(false);
     
     return (
-        <main className="bg-white flex min-h-screen flex-col items-center justify-between p-16">
+        <main className="flex min-h-screen flex-col items-center justify-between p-16" style={{backgroundColor: '#eeebe3'}}>
             <motion.div
                 onViewportEnter={() => setScrollIndicatorVisible(true)}
                 onViewportLeave={() => setScrollIndicatorVisible(false)}

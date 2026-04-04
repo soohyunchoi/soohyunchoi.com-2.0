@@ -13,7 +13,11 @@ export default function TypeWriter(props: TypeWriterProps) {
         words.push(props.delay as number);
     }
     return (
-        <span className="z-0 before:block before:absolute before:-bottom-5 before:-inset-2 before:-skew-y-3 relative inline-block before:bg-gradient-to-r from-purple-500 to-pink-500">
+        <span className="z-0 relative inline-block">
+            <span
+                className="absolute -bottom-5 -inset-2 -skew-y-3 -z-10"
+                style={{ background: 'linear-gradient(to right, #0024d7 0%, #ed264a 100%)' }}
+            />
             <TypeAnimation
                 preRenderFirstString={true}
                 sequence={words}
@@ -23,11 +27,9 @@ export default function TypeWriter(props: TypeWriterProps) {
                 style={{
                     fontWeight: 100,
                 }}
-                // style={{ fontSize: '2em', display: 'inline-block' }}
                 className={`relative text-white text-7xl font-mono italic font-extralight`}
                 repeat={Infinity}
         />
       </span>
     );
   }
-  

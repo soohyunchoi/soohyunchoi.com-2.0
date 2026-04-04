@@ -10,7 +10,7 @@ interface BioCardProps {
 export const BIO_SECTION_CONTENT: BioCardProps[] = [
 	{
 		img: '/assets/images/2.0/dive.webp',
-		label: 'bringing my camera everywhere',
+		label: 'bringing my cam everywhere',
 		icon: 'ri-pulse-line',
         color: '#43545c',
         secondaryColor: '#7798a6',
@@ -71,7 +71,7 @@ export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
             Shipped a sandbox testing framework (18x faster iteration, ~$500K/month saved) \
             and an automated AI eval framework for real-time ground truth accuracy, adopted \
             org-wide by 50+ engineers.",
-        technologies: ["RAG", "Python", "AWS", "EMR", "Kafka", "OpenSearch", "DynamoDB"],
+        technologies: ["RAG", "Python", "AWS", "EMR", "PySpark",  "Kafka", "OpenSearch", "DynamoDB"],
         logo: "https://media.licdn.com/dms/image/v2/D4E0BAQFhA9Zcn70JcQ/company-logo_200_200/B4EZpZ4PjKIoAI-/0/1762444507684/amazonscience_logo?e=1776902400&v=beta&t=PlU9ytie-QlIZQXxqBj6ytE3QbqDJjRg0y2TGaygpzU"
     },
     {

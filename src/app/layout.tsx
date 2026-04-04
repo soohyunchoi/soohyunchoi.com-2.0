@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='bg-white scroll-smooth'>
-        <body className={`bg-white ${inter.className}`}>
+    <html lang="en" className='scroll-smooth' style={{backgroundColor: '#eeebe3'}}>
+        <body className={inter.className} style={{backgroundColor: '#eeebe3'}}>
             <LayoutWrapper>
                 {children}
             </LayoutWrapper>

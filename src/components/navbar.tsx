@@ -1,6 +1,6 @@
 'use client';
 import React, { Component, useState } from 'react';
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Logo } from './logo';
 import { RESUME_LINK } from '@/app/constants';
 interface NavLinkProps {
@@ -60,8 +60,8 @@ function NavBar() {
     return (
         <div>
             <motion.div
-                className="fixed bg-gradient-to-r from-purple-500 to-pink-500 top-0 left-0 right-0 h-1.5 origin-left z-40"
-                style={{ scaleX: scaleX }}
+                className="fixed top-0 left-0 right-0 h-1.5 origin-left z-40"
+                style={{ scaleX: scaleX, background: "linear-gradient(to right, #0024d7 0%, #ed264a 50%, #e6e637 100%" }}
             />
             <div className='text-black backdrop-blur flex justify-between fixed top-0 left-0 right-0 pt-7 h-20 px-32 z-30'>
                 <Logo/>

@@ -79,7 +79,7 @@ function JobCard(props: JobCardProps) {
                 </h1>
 				<h2 className='text-xl font-light'></h2>
 				<p className='text-lg font-light'>{props.description}</p>
-					<div className='flex flex-row space-x-2 pt-2'>
+					<div className='flex flex-row flex-wrap gap-2 pt-2'>
 						{
 							props.technologies.map((technology) => (
 								<TechnologyBadge technology={technology} />
@@ -97,8 +97,8 @@ interface TechnologyBadgeProps {
 }
 function TechnologyBadge(props: TechnologyBadgeProps) {
     return (
-        <div className={`cursor-default px-2 rounded-full text-lg font-light border border-black ${props.className}`}>
-            <p className='text-lg font-light'>{props.technology}</p>
+        <div className={`tech-badge px-3 py-0.5 cursor-default ${props.className}`}>
+            <p className='text-lg font-light select-none'>{props.technology}</p>
         </div>
     );
 }
@@ -151,19 +151,6 @@ interface IconLinkProps {
 }
 
 function IconLink(props: IconLinkProps) {
-    const draw: Variants = {
-        hidden: { pathLength: 0, opacity: 0 },
-        visible: {
-            pathLength: 1,
-            opacity: 1,
-            fill: '#FAF0E6',
-            transition: {
-                pathLength: { type: "spring", duration: 1, bounce: 0 },
-                opacity: { duration: 0.01 },
-                fill: { duration: 0.7, delay: 0.2, type: 'spring'},
-            }
-        }
-    };
     const buttons: Variants = {
         hidden: {
             y: '0px',
@@ -185,32 +172,15 @@ function IconLink(props: IconLinkProps) {
             <motion.div
                 whileHover="visible"
                 whileTap="visible"
-                className='h-10 w-10 rounded-full flex items-center justify-center cursor-pointer'
+                className='tech-badge h-10 w-10 flex items-center justify-center cursor-pointer'
                 initial="hidden"
                 variants={buttons}
                 onClick={(e) => {
-                    e.preventDefault(); // prevent default browser behavior
+                    e.preventDefault();
                     window.open(props.to, "_blank");
                 }}
             >
-                <motion.svg
-
-                    className="absolute"
-                    width="60"
-                    height="60"
-                >
-                <motion.circle
-                    cx="30"
-                    cy="30"
-                    r="20"
-                    stroke="#111"
-                    strokeWidth="1.5"
-                    fill="#FFF"
-                    variants={draw}
-                />
-                </motion.svg>
-                <motion.i className={`relative ${props.icon}`}/>
-
+                <i className={`${props.icon} text-base`}/>
             </motion.div>
         </div>
 	);

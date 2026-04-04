@@ -115,13 +115,14 @@ function TitleColumn(props: TitleColumnProps) {
 					</p>
 
 					<p>
-					I've always been a builder. I built my first PC when I was in middle school and my first calculator app when I was in elementary school. I think being a builder feeds into my love for learning -- 
+					I've always been a builder. I built my first PC when I was in middle school and my first calculator app when I was in elementary school. I think being a builder feeds into my love for learning --
                     I have way too many hobbies and interests, but I think that's what gives life its flavor :)
 					</p>
 
-					<p>
-					Outside of work, I love house music, snowboarding, surfing, anything outdoorsy, photography, and traveling!
-					</p>
+                    <p>
+                    I genuinely believe that life is just people and experiences. I love meeting new people and optimize to work with people who share the same values: lifelong learning, empathy, and drive to get the most out of life.
+                    Give me that and an interesting problem to chew on, and I'm a happy camper.
+                    </p>
 
 					<p>
 					<span className='italic font-sans bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>hint:</span> click the arrows to try my over designed carousel !
@@ -148,6 +149,7 @@ interface BioPictureCarouselProps {
 function BioPictureCarousel(props: BioPictureCarouselProps) {
 
     const [direction, setDirection] = useState(0);
+    const [loaded, setLoaded] = useState(true);
 
     // preload images
     useEffect(() => {
@@ -156,6 +158,10 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
             img.src = content.img;
         });
     }, []);
+
+    useEffect(() => {
+        setLoaded(false);
+    }, [props.selected]);
 
     function handleLeftClick() {
         setDirection(-1);
@@ -194,6 +200,7 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
                 {/* <BioPicture src='/assets/images/2.0/surfing.jpg/'/> */}
                 <div className='h-[35rem] w-[24rem] relative overflow-hidden rounded-xl'>
                     {/* <img className='absolute inset-0 w-full h-full object-cover' src={`${BIO_SECTION_CONTENT[props.selected].img}`} alt='sush'/> */}
+                    {!loaded && <div className='absolute inset-0 bg-gray-800 animate-pulse z-10'/>}
                     <AnimatePresence initial={false} custom={direction}>
                         <motion.img
                             className='absolute inset-0 w-full h-full object-cover select-none'
@@ -204,6 +211,7 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
                             animate="center"
                             exit="exit"
                             custom={direction}
+                            onLoad={() => setLoaded(true)}
                             transition={{
                                 x: { type: "spring", stiffness: 300, damping: 30 },
                                 opacity: { duration: 0.2 }
@@ -233,7 +241,7 @@ function CarouselButton(props: CarouselButtonProps) {
     };
     const buttonVariants: Variants = {
         initial: {
-            backgroundColor: "#FFFFFF", // White background on hover
+            backgroundColor: "#eeebe3",
         },
         hoverLeft: {
             x: "-5px", // Move arrow 5 pixels to the left

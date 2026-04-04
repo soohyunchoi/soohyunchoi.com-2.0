@@ -18,7 +18,7 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
     }, []);
     
     if (isLoading) {
-        return <div className="min-h-screen w-full bg-white" />;
+        return <div className="min-h-screen w-full" style={{backgroundColor: '#eeebe3'}} />;
     }
     
     if (isMobile) {
@@ -26,9 +26,9 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
     }
     
     return (
-        <>
+        <div className="max-w-[1400px] mx-auto w-full">
             <NavBar />
             {children}
-        </>
+        </div>
     );
 } 
