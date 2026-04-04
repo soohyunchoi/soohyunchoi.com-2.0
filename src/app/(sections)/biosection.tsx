@@ -131,7 +131,7 @@ function TitleColumn(props: TitleColumnProps) {
 				<div className="font-serif font-light text-xl space-y-5 pt-8">
 
 					<p>
-					People call me Sush. I graduated from UC Santa Barbara (go Gauchos!) with a bachelor's in Computer Science.
+					People call me Sush (<i> soo-sh </i>). I graduated from UC Santa Barbara—go Gauchos—with a bachelor's in Computer Science.
 					</p>
 
 					<p>
