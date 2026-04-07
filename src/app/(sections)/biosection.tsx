@@ -34,7 +34,7 @@ export default function AboutSection() {
     }
 
 	return (
-		<section id='bio' className="mt-48 text-black grid grid-cols-2 h-screen w-full">
+		<section id='bio' className="mt-2 text-black grid grid-cols-2 h-screen w-full">
 			<TitleColumn selected={selected} counter={counter}/>
             <BioPictureCarousel
                 incrementCounter={incrementCounter}

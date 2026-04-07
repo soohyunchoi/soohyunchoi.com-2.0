@@ -16,7 +16,8 @@ module.exports = {
           'sans': ['ltc-bodoni-175'],
           'serif': ['futura-pt'],
           'serif-bold': ['futura-pt-bold'],
-          'mono': ['JetBrains Mono']
+          'mono': ['JetBrains Mono'],
+          'banner': ['itc-garamond-narrow', 'sans-serif'],
       },
       width: {
           '128': '32rem',

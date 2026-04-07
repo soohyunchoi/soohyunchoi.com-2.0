@@ -16,6 +16,9 @@ export default function Footer() {
                 </div>
                 <div className='space-y-2 flex flex-col items-center'>
                     <p className='font-light'>
+                        <i>Design inspired by <a href="https://www.hugohoppmann.com/salomon" className='underline'>Hugo Hoppmann's Salomon</a></i>
+                    </p>
+                    <p className='font-light'>
                         Made with <i className="ri-mouse-line"></i> and <i className="ri-keyboard-box-line"></i> {'<'}3
                     </p>
                     <p className='font-light'>
