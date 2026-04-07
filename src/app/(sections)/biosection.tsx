@@ -1,7 +1,7 @@
 import 'remixicon/fonts/remixicon.css';
 import { motion, useScroll, Variants, AnimatePresence } from "framer-motion";
 import { IconFooter } from './worksection';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BIO_SECTION_CONTENT } from '../constants';
 import Head from 'next/head';
 
@@ -178,19 +178,6 @@ interface BioPictureCarouselProps {
 function BioPictureCarousel(props: BioPictureCarouselProps) {
 
     const [direction, setDirection] = useState(0);
-    const [loaded, setLoaded] = useState(true);
-
-    // preload images
-    useEffect(() => {
-        BIO_SECTION_CONTENT.forEach(content => {
-            const img = new Image();
-            img.src = content.img;
-        });
-    }, []);
-
-    useEffect(() => {
-        setLoaded(false);
-    }, [props.selected]);
 
     function handleLeftClick() {
         setDirection(-1);
@@ -235,7 +222,6 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
                 {/* <BioPicture src='/assets/images/2.0/surfing.jpg/'/> */}
                 <div className='h-[35rem] w-[24rem] relative overflow-hidden rounded-xl'>
                     {/* <img className='absolute inset-0 w-full h-full object-cover' src={`${BIO_SECTION_CONTENT[props.selected].img}`} alt='sush'/> */}
-                    {!loaded && <div className='absolute inset-0 bg-gray-800 animate-pulse z-10'/>}
                     <AnimatePresence initial={false} custom={direction}>
                         <motion.img
                             className='absolute inset-0 w-full h-full object-cover select-none'
@@ -246,7 +232,6 @@ function BioPictureCarousel(props: BioPictureCarouselProps) {
                             animate="center"
                             exit="exit"
                             custom={direction}
-                            onLoad={() => setLoaded(true)}
                             transition={{
                                 x: { type: "spring", stiffness: 300, damping: 30 },
                                 opacity: { duration: 0.2 }
