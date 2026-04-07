@@ -21,7 +21,7 @@ export default function WorkSection() {
 	return (
 		<>
 			<ScrollBanner items={WORK_BANNER_ITEMS} backgroundColor={GRADIENT_COLORS[0]} gradientStops={[0, 20, 100]} />
-			<section id="work" className="text-black grid grid-cols-2 pt-48 mb-72">
+			<section id="work" className="text-black grid grid-cols-2 pt-48 mb-32">
 				<TitleColumn/>
 				<JobsColumn/>
 			</section>
