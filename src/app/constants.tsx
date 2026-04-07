@@ -110,7 +110,7 @@ export const ABOUT_SECTION_CONTENT: JobCardProps[] = [
             and an automated AI eval framework for real-time ground truth accuracy, adopted \
             org-wide by 50+ engineers.",
         technologies: ["RAG", "Python", "AWS", "EMR", "PySpark",  "Kafka", "OpenSearch", "DynamoDB"],
-        logo: "https://media.licdn.com/dms/image/v2/D4E0BAQFhA9Zcn70JcQ/company-logo_200_200/B4EZpZ4PjKIoAI-/0/1762444507684/amazonscience_logo?e=1776902400&v=beta&t=PlU9ytie-QlIZQXxqBj6ytE3QbqDJjRg0y2TGaygpzU"
+        logo: "/assets/images/2.0/amazonscience_logo.jpg"
     },
     {
         startDate: new Date(2021, 6),
