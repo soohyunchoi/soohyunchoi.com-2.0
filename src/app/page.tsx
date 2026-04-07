@@ -15,7 +15,7 @@ export default function Home() {
             <motion.div
                 onViewportEnter={() => setScrollIndicatorVisible(true)}
                 onViewportLeave={() => setScrollIndicatorVisible(false)}
-                viewport={{margin: '-90% 0% 0% 0%'}}
+                viewport={{margin: '-70% 0% 0% 0%'}}
             >
             <TitleCard/>
             </motion.div>
