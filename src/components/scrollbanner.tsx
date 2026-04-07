@@ -27,7 +27,7 @@ export default function ScrollBanner({
     items,
     backgroundColor = '#0024d7',
     gradient = true,
-    speed = 2,
+    speed = 5,
     direction = 1,
     tilt = DEFAULT_TILT,
     gradientStops = GRADIENT_STOPS,
@@ -37,7 +37,7 @@ export default function ScrollBanner({
         : backgroundColor;
     const { scrollY } = useScroll();
     const x = useTransform(scrollY, (v) => -v * speed * direction);
-    const springX = useSpring(x, { stiffness: 80, damping: 15, mass: 0.5 });
+    const springX = useSpring(x, { stiffness: 100, damping: 15, mass: 0.1 });
 
     const repeated = Array(REPEAT_COUNT).fill(items).flat() as BannerItem[];
 

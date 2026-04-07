@@ -10,7 +10,7 @@ export interface BannerItem {
 }
 export const WORK_BANNER_ITEMS: BannerItem[] = [
     { label: "Sys logs are love letters to your future self", icon: Globe },
-    { label: "Make it work, make it right, make it fast", icon: Globe },
+    // { label: "Make it work, make it right, make it fast", icon: Globe },
 ];
 export const BIO_BANNER_ITEMS: BannerItem[] = [
     { label: "If I'm an advocate for anything, it's to move. — Anthony Bourdain", icon: Globe },

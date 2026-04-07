@@ -5,7 +5,7 @@ import { useRef } from "react";
 export default function Footer() {
 	const ref = useRef(null);
 	return (
-        <div className="flex flex-col items-center text-black font-serif justify-center mt-32 space-y-5">
+        <div className="flex flex-col items-center text-black font-serif justify-center mt-96 space-y-5">
                 <div className='space-y-2 flex flex-col items-center'>
                     <p>
                         Thanks for visiting :)
