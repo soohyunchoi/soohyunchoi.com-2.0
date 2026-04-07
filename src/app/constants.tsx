@@ -1,4 +1,20 @@
 import AboutSection, { JobCardProps } from "./(sections)/worksection";
+import type { LucideIcon } from 'lucide-react';
+import { Code2, Layers, Smartphone, Network, Brain } from 'lucide-react';
+
+export const GRADIENT_COLORS = ["#0024d7", "#ed264a", "#e6e637"];
+
+export interface BannerItem {
+    label: string;
+    icon: LucideIcon;
+}
+export const WORK_BANNER_ITEMS: BannerItem[] = [
+    { label: "Software Engineering", icon: Code2 },
+    { label: "Full-Stack Development", icon: Layers },
+    { label: "iOS Development", icon: Smartphone },
+    { label: "System Design", icon: Network },
+    { label: "Machine Learning", icon: Brain },
+];
 
 interface BioCardProps {
 	img: string,
@@ -10,10 +26,24 @@ interface BioCardProps {
 export const BIO_SECTION_CONTENT: BioCardProps[] = [
 	{
 		img: '/assets/images/2.0/dive.webp',
-		label: 'bringing my cam everywhere',
+		label: 'diving into new things',
 		icon: 'ri-pulse-line',
         color: '#43545c',
         secondaryColor: '#7798a6',
+	},
+	{
+		img: '/assets/images/2.0/band.webp',
+		label: 'playing my guitar',
+		icon: 'ri-music-line',
+        color: '#34b7eb',
+        secondaryColor: '#146787',
+	},
+	{
+		img: '/assets/images/2.0/half_dome.webp',
+		label: 'hiking with friends',
+		icon: 'ri-footprint-line',
+        color: '#ffd70f',
+        secondaryColor: '#eddc87',
 	},
 	{
         img: '/assets/images/2.0/dj_v2.webp',
@@ -49,7 +79,14 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
         icon: 'ri-heart-line',
         color: '#ff7e14',
         secondaryColor: '#c9966d',
-    }
+    },
+    {
+        img: '/assets/images/2.0/big_sur.webp',
+        label: '"cowboy" napping',
+        icon: 'ri-zzz-line',
+        color: '#942300',
+        secondaryColor: '#a84e32',
+    },
 ];
 export const RESUME_LINK: string = 'https://drive.google.com/file/d/1dwCIBo9f2swiSd8T905KPb60orNUqive/view?usp=sharing';
 export const LINKS: any= {
