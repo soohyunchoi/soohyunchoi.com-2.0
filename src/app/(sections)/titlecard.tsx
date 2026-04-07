@@ -27,7 +27,7 @@ export default function TitleCard() {
 	return (
 		<motion.section
 			id='title'
-			className="flex flex-col items-start text-black font-serif justify-center w-256 h-screen -mt-32 mb-32 space-y-3"
+			className="flex flex-col items-start text-black font-serif justify-center w-256 h-screen -mt-32 -mb-16 space-y-3"
 			variants={container}
 			initial="hidden"
 			whileInView="visible"
