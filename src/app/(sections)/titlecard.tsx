@@ -1,5 +1,6 @@
 'use client';
 import TypeWriter from '../../components/typewriter'
+import SectionGrid from '../../components/SectionGrid'
 import { motion, Variants } from "framer-motion";
 
 const container: Variants = {
@@ -27,12 +28,13 @@ export default function TitleCard() {
 	return (
 		<motion.section
 			id='title'
-			className="flex flex-col items-start text-black font-serif justify-center w-256 h-screen -mt-32 -mb-16 space-y-3"
+			className="relative overflow-hidden flex flex-col items-start text-black font-serif justify-center w-256 h-screen -mt-32 -mb-16 space-y-3"
 			variants={container}
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: false, margin: "0px 0px -60px 0px" }}
 		>
+			<SectionGrid />
 			<motion.h1 className="text-8xl font-extralight z-20" variants={popIn}>
 				<span className="font-light"> Hey! I'm </span> <span className="font-sans z-20">Soohyun. </span>
 			</motion.h1>

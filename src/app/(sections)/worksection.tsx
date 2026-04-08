@@ -1,6 +1,7 @@
 import 'remixicon/fonts/remixicon.css';
 import { ABOUT_SECTION_CONTENT, BIO_BANNER_ITEMS, GRADIENT_COLORS, LINKS, WORK_BANNER_ITEMS } from '@/app/constants';
 import ScrollBanner from '@/components/scrollbanner';
+import SectionGrid from '@/components/SectionGrid';
 import { motion, Variants } from "framer-motion";
 
 const popIn: Variants = {
@@ -21,7 +22,8 @@ export default function WorkSection() {
 	return (
 		<>
 			<ScrollBanner items={WORK_BANNER_ITEMS} backgroundColor={GRADIENT_COLORS[0]} gradientStops={[0, 20, 100]} />
-			<section id="work" className="text-black grid grid-cols-2 pt-48 mb-32">
+			<section id="work" className="relative overflow-hidden text-black grid grid-cols-2 pt-48 mb-32">
+				<SectionGrid />
 				<TitleColumn/>
 				<JobsColumn/>
 			</section>

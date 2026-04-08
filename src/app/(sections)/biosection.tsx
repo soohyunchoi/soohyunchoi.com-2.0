@@ -1,5 +1,6 @@
 import 'remixicon/fonts/remixicon.css';
 import { motion, useScroll, Variants, AnimatePresence } from "framer-motion";
+import SectionGrid from '@/components/SectionGrid';
 import { IconFooter } from './worksection';
 import { useState } from "react";
 import { BIO_SECTION_CONTENT } from '../constants';
@@ -34,7 +35,8 @@ export default function AboutSection() {
     }
 
 	return (
-		<section id='bio' className="mt-2 text-black grid grid-cols-2 h-screen w-full">
+		<section id='bio' className="relative overflow-hidden mt-2 text-black grid grid-cols-2 h-screen w-full">
+			<SectionGrid />
 			<TitleColumn selected={selected} counter={counter}/>
             <BioPictureCarousel
                 incrementCounter={incrementCounter}
