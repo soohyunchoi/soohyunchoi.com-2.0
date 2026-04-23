@@ -137,7 +137,7 @@ function TitleColumn(props: TitleColumnProps) {
 					<p>
                     My specialty is in building large scale distributed systems and AI infrastructure. My most recent project involved
                     materializing & ingesting 150M+ documents every day, and retrieving the 10 most relevant documents fast enough
-                    to continue a conversation with an LLM in real time. This lets Amazon's LLM systems -- Alexa+, Rufus, Nova -- answer accurately about 
+                    to continue a conversation with an LLM in real time. This lets Amazon's LLM systems -- notably, Alexa+ -- answer accurately about 
                     the latest information, such as sports, news, and stock prices, something that wouldn't be possible otherwise!
 					</p>
 
