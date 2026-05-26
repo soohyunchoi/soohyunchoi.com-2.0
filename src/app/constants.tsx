@@ -26,7 +26,7 @@ interface BioCardProps {
 export const BIO_SECTION_CONTENT: BioCardProps[] = [
 	{
 		img: '/assets/images/2.0/dive.webp',
-		label: 'diving into new things',
+		label: 'taking portraits',
 		icon: 'ri-pulse-line',
         color: '#43545c',
         secondaryColor: '#7798a6',
@@ -40,7 +40,7 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
 	},
 	{
 		img: '/assets/images/2.0/half_dome.webp',
-		label: 'hiking with friends',
+		label: 'going on a hike',
 		icon: 'ri-footprint-line',
         color: '#ffd70f',
         secondaryColor: '#eddc87',
@@ -54,7 +54,7 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
 	},
     {
         img: '/assets/images/2.0/rinjani.webp',
-        label: 'trying hard things',
+        label: 'planning a trek',
         icon: 'ri-rocket-line',
         color: '#ffd70f',
         secondaryColor: '#eddc87',
@@ -68,7 +68,7 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
     },
     {
         img: '/assets/images/2.0/49.webp',
-        label: 'spending time with friends',
+        label: 'watching the sunset',
         icon: 'ri-mental-health-line',
         color: '#9D44C0',
         secondaryColor: '#FFA1F5',
@@ -82,7 +82,7 @@ export const BIO_SECTION_CONTENT: BioCardProps[] = [
     },
     {
         img: '/assets/images/2.0/big_sur.webp',
-        label: '"cowboy" napping',
+        label: 'enjoying the view',
         icon: 'ri-zzz-line',
         color: '#942300',
         secondaryColor: '#a84e32',
