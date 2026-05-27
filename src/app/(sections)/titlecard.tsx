@@ -41,7 +41,7 @@ export default function TitleCard() {
 				<TypeWriter words={['scalable', 'robust', 's.o.t.a.', 'impactful', 'fast']} delay={1500} />
 			</motion.h1>
 			<motion.h1 className="text-8xl font-extralight" variants={popIn}>
-				<span className="font-light"> software.</span>
+				<span className="font-light"> systems.</span>
 			</motion.h1>
 		</motion.section>
 	);
